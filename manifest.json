@@ -1,6 +1,6 @@
 {
   "name": "JS Hello",
   "description": "Plugin em JavaScript puro",
-  "code": "https://meu-plugin.netlify.app/plugin.js",
+  "code": "https://playful-arithmetic-369e90.netlify.app/plugin.js",
   "permissions": ["content:read"]
 }

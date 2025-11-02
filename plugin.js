@@ -4,6 +4,9 @@ penpot.ui.open("Hello (JS puro)", "https://playful-arithmetic-369e90.netlify.app
 });
 penpot.ui.sendMessage({ type: "plugin_loaded" });  // Envia uma mensagem para o frontend
 
+console.log("penpot.selection:", penpot.selection);
+
+
 // Função para acessar objetos selecionados
 async function getSelectedObjects() {
   const selection = await penpot.selection.get();  // Pega os objetos selecionados

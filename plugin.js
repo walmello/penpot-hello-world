@@ -1,10 +1,10 @@
-// Esse código roda dentro do sandbox do Penpot
-console.log("👋 Hello Penpot plugin!");
+// plugin.js
 
-// Quando o plugin é carregado
-window.addEventListener("message", (event) => {
-  console.log("Mensagem do Penpot:", event.data);
+// Abre a janela (iframe) do plugin dentro do Penpot
+penpot.ui.open("Hello Plugin", "/index.html", {
+  width: 400,
+  height: 200
 });
 
-// Manda uma mensagem pro Penpot só pra testar
-window.parent.postMessage({ type: "hello", message: "Olá do plugin!" }, "*");
+// Envia uma mensagem inicial para a UI (iframe)
+penpot.ui.sendMessage({ type: "greet", text: "Olá do Penpot!" });

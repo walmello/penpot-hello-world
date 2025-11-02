@@ -1,7 +1,6 @@
 {
-  "name": "Hello Plugin (Sem Framework)",
-  "description": "Plugin básico só com HTML e JS",
-  "code": "/plugin.js",
-  "icon": "/icon.png",
+  "name": "JS Hello",
+  "description": "Plugin em JavaScript puro",
+  "code": "https://meu-plugin.netlify.app/plugin.js",
   "permissions": ["content:read"]
 }

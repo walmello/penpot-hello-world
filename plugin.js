@@ -1,10 +1,5 @@
-// plugin.js
-
-// Abre a janela (iframe) do plugin dentro do Penpot
-penpot.ui.open("Hello Plugin", "/index.html", {
+penpot.ui.open("Hello (JS puro)", "https://meu-plugin.netlify.app/index.html", {
   width: 400,
   height: 200
 });
-
-// Envia uma mensagem inicial para a UI (iframe)
-penpot.ui.sendMessage({ type: "greet", text: "Olá do Penpot!" });
+penpot.ui.sendMessage({ text: "Olá do plugin em JS puro!" });

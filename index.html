@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Hello Penpot Plugin 👋</h1>
+
+    <script>
+      // Recebe mensagens do Penpot
+      window.addEventListener("message", (event) => {
+        if (event.data?.type === "ping") {
+          console.log("Recebido do Penpot:", event.data);
+          // Envia resposta de volta
+          event.source.postMessage({ type: "pong", msg: "Hello from plugin!" }, "*");
+        }
+      });
+
+      // Manda uma mensagem pro Penpot
+      window.parent.postMessage({ type: "hello", msg: "Hello World do plugin!" }, "*");
+    </script>
+  </body>
+</html>

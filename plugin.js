@@ -1,4 +1,4 @@
-penpot.ui.open("Hello (JS puro)", "https://meu-plugin.netlify.app/index.html", {
+penpot.ui.open("Hello (JS puro)", "https://playful-arithmetic-369e90.netlify.app/index.html", {
   width: 400,
   height: 200
 });

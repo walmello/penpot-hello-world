@@ -1,8 +1,7 @@
 {
-  "manifest_version": 1,
-  "name": "Hello World Plugin",
-  "description": "Meu primeiro plugin Penpot",
-  "version": "1.0.0",
-  "permissions": [],
-  "entry": "index.html"
+  "name": "Hello Plugin (Sem Framework)",
+  "description": "Plugin básico só com HTML e JS",
+  "code": "/plugin.js",
+  "icon": "/icon.png",
+  "permissions": ["content:read"]
 }

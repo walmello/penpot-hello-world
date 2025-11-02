@@ -1,20 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Hello Plugin (Sem Framework)</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 1rem;
+      }
+      button {
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+      }
+    </style>
+  </head>
   <body>
-    <h1>Hello Penpot Plugin 👋</h1>
+    <h3>Hello Plugin (JavaScript Puro)</h3>
+    <p id="log">Aguardando mensagem...</p>
+    <button id="reply">Responder Penpot</button>
 
     <script>
-      // Recebe mensagens do Penpot
+      // Recebe mensagem do Penpot (vinda de plugin.js)
       window.addEventListener("message", (event) => {
-        if (event.data?.type === "ping") {
-          console.log("Recebido do Penpot:", event.data);
-          // Envia resposta de volta
-          event.source.postMessage({ type: "pong", msg: "Hello from plugin!" }, "*");
-        }
+        document.getElementById("log").textContent =
+          "Recebido: " + JSON.stringify(event.data);
       });
 
-      // Manda uma mensagem pro Penpot
-      window.parent.postMessage({ type: "hello", msg: "Hello World do plugin!" }, "*");
+      // Envia resposta de volta para o Penpot
+      document.getElementById("reply").addEventListener("click", () => {
+        parent.postMessage(
+          { type: "reply", text: "Olá, Penpot — do plugin sem framework!" },
+          "*"
+        );
+      });
     </script>
   </body>
 </html>
